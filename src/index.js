@@ -16,4 +16,26 @@
 // urgency of items (high, medium, low)
 // date / time on items (from - to time, complete before / on date)
 
-console.log("Hello World")
+import './reset.css';
+import './styles.css';
+
+const cacheDOM = () => {
+    const addTodoButton = document.querySelector('.add-todo');
+
+    return {
+        addTodoButton,
+    };
+};
+
+const addTodo = () => {
+    const { addTodoButton } = cacheDOM();
+
+    addTodoButton.addEventListener('click', () => {
+        const newTodo = prompt('Enter a new todo');
+        return newTodo;
+    });
+};
+
+document.addEventListener('DOMContentLoaded', () => {    
+    addTodo();
+});
