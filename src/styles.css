@@ -9,6 +9,31 @@
 body {
     background-color: var(--background-color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(95, 95, 95, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
 }
 
 .navbar {
@@ -21,6 +46,27 @@ body {
     height: 100vh;
     width: 30vw;
     box-shadow: 0 0 10px 0 rgba(95, 95, 95, 0.3);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 1rem;
+    height: 100vh;
+    width: 70vw;
+}
+
+.todo-text {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 0.5rem;
+}
+
+input[type="checkbox"]:checked + .todo-text {
+    text-decoration: line-through;
+    color: var(--navbar-hover-color);
 }
 
 .navbar-title {
